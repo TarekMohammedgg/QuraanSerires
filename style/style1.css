@@ -269,8 +269,8 @@ section {
     }
 
     .project-card {
-        width: calc(50% - 10px);
-        margin: 5px;
+        width: calc(30% - 20px);
+        /*margin: 5px;*/
     }
 }
 

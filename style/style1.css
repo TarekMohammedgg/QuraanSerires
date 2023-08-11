@@ -252,7 +252,7 @@ section {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
     /* Adjust for smaller screens like Realme and iPhone */
     .search-bar {
@@ -269,7 +269,8 @@ section {
     }
 
     .project-card {
-        width: calc(40% - 20px);
+        width: calc(50% - 10px);
+        margin: 5px ; 
     }
 }
 

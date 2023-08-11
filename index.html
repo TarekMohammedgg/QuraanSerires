@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style/style1.css">
+    <link rel="icon" type="image/x-icon" href="imgs/logo.png">
+
+    <title>تسجيلات القرآن الكريم</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="ابحث عن السورة...">
+            <button id="searchButton">بحث</button>
+        </div>
+        
+    </nav>
+    <section class="projects" id="projects">
+        
+        <div class="content">
+            <div class="project-card" id="الفاتحة">
+                <div class="project-image">
+                    <a href="https://drive.google.com/file/d/1tfGcWVt1eqJ9Du9NK2ODFmBanxyYOahV/view?usp=drive_link"> <img src="imgs/Alfateha.png" /></a>
+                </div>
+            </div>
+            <div class="project-card" id="البقرة">
+                <div class="project-image">
+                    <a href="swar/Alfateha.html"> <img src="imgs/AlbaQraa.png" /></a>
+                </div>
+            </div>
+            <div class="project-card" id="آل عمران">
+                <div class="project-image">
+                    <a href="swar/AlEmran.html"> <img src="imgs/AlEmran.png" /></a>
+                </div>
+            </div>
+            <div class="project-card" id="النساء">
+                <div class="project-image">
+                    <a href="swar/AlNesaa.html"> <img src="imgs/AlNesaa.png" /></a>
+                </div>
+            </div>
+            <div class="project-card" id="المائدة">
+                <div class="project-image">
+                    <a href="swar/AlMaeda.html"> <img src="imgs/AlMaeda.png" /></a>
+                </div>
+            </div>
+            <div class="project-card" id="الأنعام">
+                <div class="project-image">
+                    <a href="swar/AlAn3aam.html"> <img src="imgs/AlAn3aam.png" /></a>
+                </div>
+            </div>
+            <div class="project-card" id="الأعراف">
+                <div class="project-image">
+                    <a href="swar/AlA3raaf.html"> <img src="imgs/AlA3raaf.png" /></a>
+                </div>
+            </div>
+            <div class="project-card" id="الأنفال">
+                <div class="project-image">
+                    <a href="swar/AlAnfaal.html"> <img src="imgs/AlAnfaal.png" /></a>
+                </div>
+            </div>
+            <div class="project-card" id="التوبة">
+                <div class="project-image">
+                    <a href="swar/AlTwbaa.html"> <img src="imgs/AlTwbaa.png" /></a>
+                </div>
+            </div>
+            <div class="project-card" id="يونس">
+                <div class="project-image">
+                    <a href="swar/Uonus.html"> <img src="imgs/Uonus.png" /></a>
+                </div>
+            </div>
+            <div class="project-card" id="هود">
+                <div class="project-image">
+                    <a href="swar/Hood.html"> <img src="imgs/Hood.png" /></a>
+                </div>
+            </div>
+            <div class="project-card" id="يوسف">
+                <div class="project-image">
+                    <a href="swar/Yousif.html"> <img src="imgs/Yousif.png" /></a>
+                </div>
+            </div>
+
+           
+
+        </div>
+    </section>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        // Function to perform search
+        const performSearch = () => {
+            const searchText = searchInput.value.trim().toLowerCase();
+            let searchQuery = searchText;
+
+            // Remove "سورة" from search query
+            searchQuery = searchQuery.replace('سورة ', '');
+
+            // Convert "ال" to "آل"
+            searchQuery = searchQuery.replace('ال ', 'آل ');
+
+            projectCards.forEach(card => {
+                const cardId = card.id.toLowerCase();
+
+                if (cardId.includes(searchQuery)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        };
+
+        // Search input keyup event
+        searchInput.addEventListener('keyup', event => {
+            performSearch();
+        });
+    </script>
+
+</body>
+
+</html>
+
+<!-- 
+            <div class="project-card">
+                <div class="project-image">
+                    <img
+                        src="imgs\1.png" />
+                </div>
+                <div class="project-info">
+
+                    <strong class="project-title">
+                        <span>الجزء الثلاثون </span>
+
+                    </strong>
+                    <p class="project-category">للشيخ هشام </p>
+                    <strong> 
+                        <a href="#" class="more-details">التفاصيل </a>
+                    </strong>
+                </div>
+            </div> 
+           
+
+        </div>
+     -->

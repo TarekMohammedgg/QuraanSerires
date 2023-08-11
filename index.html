@@ -162,9 +162,28 @@
             // Remove "سورة" from search query
             searchQuery = searchQuery.replace('سورة ', '');
 
-            // Convert "ال" to "آل"
-            searchQuery = searchQuery.replace('ال ', 'آل ');
-            
+            // Convert "ال عمران" to "آل عمران"
+            searchQuery = searchQuery.replace('ال عمران', 'آل عمران');
+            // Convert "ابراهيم" to "إبراهيم"
+            searchQuery = searchQuery.replace('ابراهيم', 'إبراهيم');
+            // convert "الاسراء" to "الإسراء"
+            searchQuery = searchQuery.replace('الاسراء', 'الإسراء');
+            // convert "الانفال" to "الأنفال"
+            searchQuery = searchQuery.replace('الانفال', 'الأنفال');
+            // convert "الانعام" to "الأنعام"
+            searchQuery = searchQuery.replace('الانعام', 'الأنعام');
+            // convert "الانبياء" to "الأنبياء"
+            searchQuery = searchQuery.replace('الانبياء', 'الأنبياء');
+            // convert "الاعراف" to "الأعراف"
+            searchQuery = searchQuery.replace('الاعراف', 'الأعراف');
+            // convert "البقره" to "البقرة"
+            searchQuery = searchQuery.replace('البقره', 'البقرة');
+            // convert "المومنون" to "المؤمنون"
+            searchQuery = searchQuery.replace('المومنون', 'المؤمنون');
+
+
+
+
 
             projectCards.forEach(card => {
                 const cardId = card.id.toLowerCase();
